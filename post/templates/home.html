@@ -1,0 +1,15 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+{% for blog in blogs.all %}
+    <div>
+        <a href="{% url 'detail' blog.id %}">{{blog.title}}</a>
+        <a href="{% url 'update' blog.id %}">수정하기</a>
+    </div>
+{% endfor %}
+
+<a href="{% url 'create' %}">새로 만들기</a>
+
+{{blogs.all}}
