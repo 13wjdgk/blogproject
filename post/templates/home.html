@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
 </head>
+<img src="{% static 'image/poo.jpg'%}" alt="">
 {% for blog in blogs.all %}
     <div>
         <a href="{% url 'detail' blog.id %}">{{blog.title}}</a>
