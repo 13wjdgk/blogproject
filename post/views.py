@@ -16,7 +16,8 @@ def detail(request,blog_id):
 
 def create(request):
     if request.method =='POST':
-        form = CreatePostForm(request.POST)
+        form = CreatePostForm(request.POST,request.FILES)
+
         if form.is_valid():
             blog = form.save(commit=False)
             blog.pub_date = timezone.datetime.now()

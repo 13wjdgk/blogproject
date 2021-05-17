@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)j)@yvs4_&u3&(!u(8$0rvf)u&$-l4y9wnel955n8zll9-p@x8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com']
 
@@ -87,10 +87,10 @@ WSGI_APPLICATION = 'Blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'d33djj8agqjkl6',
-        'USER':'rsykcrzqbwreim',
-        'PASSWORD':'96b74020d0ccf7bc20c05856e35ba40d3733c6f56763c8058b61ebc4bd7de9cb',
-        'HOST':'ec2-18-215-111-67.compute-1.amazonaws.com',
+        'NAME':'d73ug3nmln9695',
+        'USER':'uyladpskpwskav',
+        'PASSWORD':'8dafe3c0e199b6525454aa276c3906de17fd7564bebaf78424afa4ab571df58b',
+        'HOST':'ec2-54-225-228-142.compute-1.amazonaws.com',
         'PORT':'5432',
     }
 }
@@ -140,3 +140,5 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS=[os.path.join(BASE_DIR,"static")]
 STATIC_ROOT=os.path.join(BASE_DIR,'.static_root')
+MEDIA_ROOT=os.path.join(BASE_DIR,"media")
+MEDIA_URL="/media/"
